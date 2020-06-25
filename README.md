@@ -41,13 +41,13 @@
 
 ---
 
-**Synchronous Bot** is an Open-Source Discord bot developed with **NodeJS** using **_discord.js v12.2.0_, _graphicsMagick v1.23.1_ and _mysql2 v2.1.0_** granting services on administration, entertainment and information for the _[Synchronous Discord Server](https://discord.gg/UQrywtq)_. Being at the same time one of the most complete automata **Discord bot** and graphically attractive, all this features being open source. Learn and get inspired watching how **Kyonax** create this bot using **100% JavaScript code**.
+**Synchronous Bot** is an Open-Source Discord bot developed with **NodeJS** using **_discord.js v12.2.0_, _graphicsMagick v1.23.1_ and _mysql2 v2.1.0_** granting services on administration, entertainment, information, level and bank systems for the _[Synchronous Discord Server](https://discord.gg/UQrywtq)_. Being at the same time one of the most complete automata **Discord bot** and graphically attractive, all this features being open source. Learn and get inspired watching how **Kyonax** create this bot using **100% JavaScript code**.
 
 On the next updates You will be able to read all the Documentation on English and will be more specific too.
 _(You can read, learn and share the code however you can´t appropiatte it. If you are going to share the code or modify please give me Credits, more information in [**GNU General Public License v3.0**](LICENSE)_
 
 <p align="center">
-  <img src="https://github.com/Kyonax/synchronous-bot/blob/master/database/multimedia/gifs/demo/gifs/Gif_Record_Discord_Server.gif">
+  <img src="https://github.com/Kyonax/synchronous-bot/blob/master/database/multimedia/images/demo/gifs/Gif_Record_Discord_Server.gif">
 </p>
 
 ## Bot Running
@@ -82,9 +82,23 @@ As you know **Synchronous bot** use **NodeJs** and this JavaScript runtime envir
 - [**messageReactionAdd**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionAdd)
 - [**messageReactionRemove**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionRemove)
 
+### Utils for the Events
+
+- [**Attachment**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/misc/attachment.js)
+- [**Reaction**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/misc/reaction.js)
+- [**Welcome**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/misc/welcome.js)
+
+## Logic
+
+The **Level and Bank** systems use a simple logic to earn money and win xp:
+
+- [**LogicBank**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/logic/logicBank.js)
+- [**LogicMember**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/logic/logicMember.js)
+
+
 ## Commands
 
-Automata and interactive, **Synchronous Bot** has a lot of Commands that you can use tipyng the command on a **[Synchronous Discord Server](https://discord.gg/UQrywtq)** Channel Text, How can you do that?, well you need to start your text message with a **prefix** the default **Server Prefix** is **_s!_** next to this you have to add the name of the command, like this **_s!help_** _(This command gives you all the bot help information that you need)_. Now check out all the Commands that **Synchronous bot** has:
+Automata and interactive, **Synchronous Bot** has a lot of Commands that you can use tipyng the command on a **[Synchronous Discord Server](https://discord.gg/UQrywtq)** Channel Text, How can you do that?, well you need to start your text message with a **prefix** the default **Server Prefix** is **_s!_**, next to this you have to add the name of the command, like this **_s!help_** _(This command gives you all the bot help information that you need)_. Now check out all the Commands that **Synchronous bot** has:
 
 | Category          |                                       Commands                                       |         Perms |
 | ----------------- | :----------------------------------------------------------------------------------: | ------------: |
@@ -113,4 +127,5 @@ I love code and I like to do them Open Source for learn, teach and same other st
 ## License & Copyright
 
 © Kyonax (Cristian David Moreno Riaño) • Synchronous Developers
+
 Licensed under the [GNU General Public License v3.0](LICENSE).
