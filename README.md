@@ -47,7 +47,7 @@ On the next updates You will be able to read all the Documentation on English an
 _(You can read, learn and share the code however you can´t appropiatte it. If you are going to share the code or modify please give me Credits, more information in [**GNU General Public License v3.0**](LICENSE)_
 
 <p align="center">
-  <img src="https://github.com/Kyonax/bot-discord-synchronous/tree/master/database/multimedia/images/demo/gifs/Gif_Record_Discord_Server.gif">
+  <img src="https://github.com/Kyonax/bot-discord-synchronous/blob/master/database/multimedia/images/demo/gifs/Gif_Record_Discord_Server.gif">
 </p>
 
 ## Bot Running
