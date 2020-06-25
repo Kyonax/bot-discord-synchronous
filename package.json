@@ -1,0 +1,39 @@
+{
+  "name": "bot-discord-synchronous",
+  "version": "1.6.0",
+  "description": "Discord bot for Synchronous Server - discord.js v12",
+  "main": "./src/bot.js",
+  "keywords": [
+    "discord",
+    "mta"
+  ],
+  "scripts": {
+    "start": "node ./src/bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyonax/bot-discord-synchronous.git"
+  },
+  "author": "Kyonax",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/Kyonax/bot-discord-synchronous/issues"
+  },
+  "homepage": "https://github.com/Kyonax/bot-discord-synchronous#readme",
+  "dependencies": {
+    "apex-api": "^3.1.0",
+    "axios": "^0.19.2",
+    "common-tags": "^1.8.0",
+    "dateformat": "^3.0.3",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "emojione": "^4.5.0",
+    "fortnite": "^4.3.2",
+    "fortnite.js": "^2.1.4",
+    "gm": "^1.23.1",
+    "imagemagick": "^0.1.3",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "pngjs": "^5.0.0"
+  }
+}
