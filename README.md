@@ -4,7 +4,7 @@
   <img src="https://github.com/Kyonax/bot-discord-synchronous/blob/master/database/multimedia/images/demo/logo/Image_Logo_Discord_Bot_Synchronous.png">
     <br>
     <a href="https://github.com/Kyonax/bot-discord-synchronous"style="text-decoration: none">
-    <img src="https://img.shields.io/github/repo-size/Kyonax/bot-discord-synchronous">
+    <img src="https://img.shields.io/github/languages/code-size/Kyonax/bot-discord-synchronous">
     </a>
     <a href="https://github.com/Kyonax/bot-discord-synchronous"style="text-decoration: none">
     <img src="https://img.shields.io/github/languages/top/Kyonax/bot-discord-synchronous">
@@ -41,15 +41,22 @@
 
 ---
 
-**SynchronousBot** es un bot creado por **Kyonax** para la plataforma de **_Discord_** usando como lenguaje de programación **_JavaScript_** integrando la documentación de **_discord.js_ v12.2.0** en **_node.js_**, paquetes **_npm_** como **_graphicsMagick_**, **_Axios_**, **_Fortnite_** entre otros y usando **_mysql_** como la principal base de datos. Su función radica principalmente en administrar, monitorear y facilitar el uso de ciertos comandos y de el mismo **Servidor de Synchronous**.
+**Synchronous Bot** is an Open-Source Discord bot developed with **NodeJS** using **_discord.js v12.2.0_, _graphicsMagick v1.23.1_ and _mysql2 v2.1.0_** granting services on administration, entertainment and information for the _[Synchronous Discord Server](https://discord.gg/UQrywtq)_. Being at the same time one of the most complete automata **Discord bot** and graphically attractive, all this features being open source. Learn and get inspired watching how **Kyonax** create this bot using **100% JavaScript code**.
+
+On the next updates You will be able to read all the Documentation on English and will be more specific too.
+_(You can read, learn and share the code however you can´t appropiatte it. If you are going to share the code or modify please give me Credits, more information in [**GNU General Public License v3.0**](LICENSE)_
 
 <p align="center">
-  <img src="https://github.com/Kyonax/synchronous-bot/blob/master/database/multimedia/images/demo/gifs/Gif_Record_Discord_Server.gif">
+  <img src="https://github.com/Kyonax/synchronous-bot/blob/master/database/multimedia/gifs/demo/gifs/Gif_Record_Discord_Server.gif">
 </p>
 
-# Eventos discord.js
+## Bot Running
 
-La documentación de **_discord.js_** integra algunos eventos que están permanentemente activos si así se encuentra el bot, algunos de los que **SynchronousBot** utiliza, son:
+**Synchronous Bot** is running and working on a _**beta version v1.6.0**_ meanning that is still under develop and some or a lot of things are going to change on future updates, the bot are **not** optimized so a lot of code lines are going to disappear, you can check and try out the bot on **[Synchronous Discord Server](https://discord.gg/UQrywtq)**.
+
+## Discord.js Events used
+
+As you know **Synchronous bot** use **NodeJs** and this JavaScript runtime environment give you this tool to implement Discord Functions and Events on your app **[Discord.js](https://discord.js.org/#/)** and now I will show you which Events _Synchronous Bot_ use:
 
 ###### Guild Events
 
@@ -65,7 +72,6 @@ La documentación de **_discord.js_** integra algunos eventos que están permane
 ###### Message Events
 
 - [**message**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-message)
-- [**messageAttachment**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-message)
 
 ###### Ejecution Events
 
@@ -75,34 +81,36 @@ La documentación de **_discord.js_** integra algunos eventos que están permane
 
 - [**messageReactionAdd**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionAdd)
 - [**messageReactionRemove**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionRemove)
-- [**raw**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionAdd)
 
-###### Role Events
+## Commands
 
-- [**roleCreate**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-roleCreate)
-- [**roleDelete**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-roleDelete)
-- [**roleUpdate**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-roleUpdate)
+Automata and interactive, **Synchronous Bot** has a lot of Commands that you can use tipyng the command on a **[Synchronous Discord Server](https://discord.gg/UQrywtq)** Channel Text, How can you do that?, well you need to start your text message with a **prefix** the default **Server Prefix** is **_s!_** next to this you have to add the name of the command, like this **_s!help_** _(This command gives you all the bot help information that you need)_. Now check out all the Commands that **Synchronous bot** has:
 
-# Comandos
-
-Los comandos que se han implementado en **SynchronousBot** son de exclusivo uso para el **_Servidor de Discord Synchronous_**, cada uno de ellos tiene permisos correspondientes de uso y se ha buscado integrar la mayor cantidad de comandos para crear a el bot _definitivo_.
-
-| Categoría         |                                       Comandos                                       |      Permisos |
+| Category          |                                       Commands                                       |         Perms |
 | ----------------- | :----------------------------------------------------------------------------------: | ------------: |
-| **Guild**         |                  `suggestion`-`help`-`ping`-`whois`-`uptime`-`bin`                   |         Todos |
-| **Magik**         |                              `buenardo`-`magik`-`shhh`                               |         Todos |
-| **Member**        |                          `bank`-`inventory`-`love`-`penis`                           |         Todos |
+| **Guild**         |                  `suggestion`-`help`-`ping`-`whois`-`uptime`-`bin`                   |           All |
+| **Magik**         |                              `buenardo`-`magik`-`shhh`                               |           All |
+| **Member**        |                          `bank`-`inventory`-`love`-`penis`                           |           All |
 | **Mod**           |         `addrole`-`ban`-`bondage`-`clear`-`kick`-`poll`-`removerole`-`warn`          | Admins - Mods |
 | **Owner**         |                          `prefix`-`news`-`putembeds`-`set`                           |         Owner |
-| **RolePlay**      | `age`-`biography`-`dni`-`do`-`fuck`-`hug`-`kiss`-`me`-`ooc`-`pat`-`rep`-`try`-`work` |         Todos |
-| **Store**         |                                    `pay`-`store`                                     |         Todos |
-| **Miscellaneous** |                  `8ball`-`alpaca`-`cat`-`dog`-`llama`-`meme`-`seal`                  |         Todos |
-| **Games**         |                              `fortnite`-`steam`-`apex`                               |         Todos |
+| **RolePlay**      | `age`-`biography`-`dni`-`do`-`fuck`-`hug`-`kiss`-`me`-`ooc`-`pat`-`rep`-`try`-`work` |           All |
+| **Miscellaneous** |                  `8ball`-`alpaca`-`cat`-`dog`-`llama`-`meme`-`seal`                  |           All |
+| **Games**         |                              `fortnite`-`steam`-`apex`                               |           All |
+| **Store**         |                                    `pay`-`store`                                     |           All |
+
+## Support
+
+I love code and I like to do them Open Source for learn, teach and same other stuff, if You want to **Support** my work you can check out the links below. Maybe I can do tutorials in the future with your help. Thanks for check my work, see you.
+
+- [**FaceBook**](https://www.facebook.com/MrKyonax)
+- [**Twitter**](https://twitter.com/Synk_Kyo)
+- [**Twitch**](https://www.twitch.tv/synk_kyonax)
+- [**YouTube**](https://www.youtube.com/channel/UCOCGuDADwciaJfnCxWoYGHA)
+- [**Donations**](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5LY2Y46Q7DSWL&source=url)
 
 ---
 
 ## License & Copyright
 
-© Kyonax (Cristian David Moreno Riaño), Synchronous Developers
-
+© Kyonax (Cristian David Moreno Riaño) • Synchronous Developers
 Licensed under the [GNU General Public License v3.0](LICENSE).
