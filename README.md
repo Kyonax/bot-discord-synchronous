@@ -47,7 +47,7 @@ On the next updates You will be able to read all the Documentation on English an
 _(You can read, learn and share the code however you can´t appropiatte it. If you are going to share the code or modify please give me Credits, more information in [**GNU General Public License v3.0**](LICENSE)_
 
 <p align="center">
-  <img src="https://github.com/Kyonax/synchronous-bot/blob/master/database/multimedia/images/demo/gifs/Gif_Record_Discord_Server.gif">
+  <img src="https://github.com/Kyonax/bot-discord-synchronous/tree/master/database/multimedia/images/demo/gifs/Gif_Record_Discord_Server.gif">
 </p>
 
 ## Bot Running
@@ -82,18 +82,18 @@ As you know **Synchronous bot** use **NodeJs** and this JavaScript runtime envir
 - [**messageReactionAdd**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionAdd)
 - [**messageReactionRemove**](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionRemove)
 
-### Utils for the Events
+###### Utils for the Events
 
-- [**Attachment**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/misc/attachment.js)
-- [**Reaction**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/misc/reaction.js)
-- [**Welcome**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/misc/welcome.js)
+- [**Attachment**](https://github.com/Kyonax/bot-discord-synchronous/tree/master/src/utils/misc/attachment.js)
+- [**Reaction**](https://github.com/Kyonax/bot-discord-synchronous/tree/master/src/utils/misc/reaction.js)
+- [**Welcome**](https://github.com/Kyonax/bot-discord-synchronous/tree/master/src/utils/misc/welcome.js)
 
 ## Logic
 
 The **Level and Bank** systems use a simple logic to earn money and win xp:
 
-- [**LogicBank**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/logic/logicBank.js)
-- [**LogicMember**](https://github.com/Kyonax/synchronous-bot/blob/master/src/utils/logic/logicMember.js)
+- [**LogicBank**](https://github.com/Kyonax/bot-discord-synchronous/tree/master/src/utils/logic/logicBank.js)
+- [**LogicMember**](https://github.com/Kyonax/bot-discord-synchronous/tree/master/src/utils/logic/logicMember.js)
 
 
 ## Commands
