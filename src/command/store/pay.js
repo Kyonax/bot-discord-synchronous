@@ -80,6 +80,7 @@ module.exports = class PayCommand extends BaseCommand {
     );
     if (!ObjectBankMember.memberCoins)
       return err.noFindMemberBank(bot, message);
+    if (!isNaN(type)) return err.noTypeFoundPay(bot, message, type);
     //Types
     if (type.toLowerCase() === "user") {
       //Validación de variables - Monedas - Usuario
