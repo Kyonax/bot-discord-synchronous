@@ -357,40 +357,374 @@ module.exports = class PutembedsCommand extends BaseCommand {
             `<@&711582059025662053>\n<@&711582151279116338>\n<@&711592908725420122>\n<@&711592946209783808>\n<@&711592974672199729>\n<@&711593034436837437>\n<@&711593082902151169>\n<@&711593190775455836>\n<@&711593147754348565>\n<@&711593190775455836>\n<@&711593335768350721>`,
             true
           )
-          .attachFiles(["database/multimedia/gifs/embeds/MTA.gif"])
-          .setImage("attachment://MTA.gif")
+          .attachFiles(["database/multimedia/gifs/embeds/Bio_ES.png"])
+          .setImage("attachment://Bio_ES.png")
           .setColor(noneColor);
         mtaChannel.send(embedWelcomeMTA).catch((err) => console.log(err));
         break;
       case "TEST":
         let embedTest = new MessageEmbed()
-          .setTitle("🎉Bienvenida/o al Servidor de Discord Synchronous🎉")
+          .setTitle("ABOUT KYONAX")
           .setDescription(
-            `**${message.author.username}** ahora eres miembro de nuestra gran comunidad de **Discord** y por ende te daré algunas ***pautas y consejos*** que necesitarás para disfrutar del **Servidor**.`
-          )
-          .addFields(
-            { name: "\u200B", value: "\u200B" },
-            {
-              name: "**Bot Principal**",
-              value:
-                "Nuestro Servidor tiene un **Bot personalizado** que te será de mucha ayuda para **entretenerte, dar sugerencias, averiguar estadísticas y mucho mucho más**, para poder usarlo y ver sus comandos usa este **comando en cualquier canal de texto del Servidor:** `s!help`",
-            },
-            {
-              name: "**Escoge un Rol**",
-              value:
-                "Para poder acceder a los **canales de Texto y Voz** debes elegir un Rol, para ello debes **dirigirte al canal de <#696103284129267812> y reaccionar con el emoji** correspondiente para ver los canales que deseas.",
-            },
-            {
-              name: "**Lee las Reglas**",
-              value:
-                "Las reglas o normas son muy importantes en el Servidor, ellas nos **ayudan a mantener un mejor ambiente** y por ello es necesario que además de **Leer las reglas, también las Apliques**.\n\n_Si se rompe alguna regla se te dará un **warn**, si tienes muchos es muy posible que se te **bannee del Servidor**_",
-            },
-            {name:"**Contáctanos y Apóyanos**",value:"**[FacebookPage](https://www.facebook.com/SynchronousTeam) | [YouTube](https://www.youtube.com/channel/UCjSHbvH1VPOWXGC_Z5wEHwQ) | [Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5LY2Y46Q7DSWL&source=url)** "}
+            `**Kyonax** was born on ** July 31, 2000 **, in ** Bogotá D.C / Colombia **, entering the world of digital content creation at the age of ** 12 years old**, and to the world of programming at ** 14 **, started with ** video editing **, shortly after with ** image editing **, ** creating ** ** scripts and poetry **.             He trained his voice for ** locution ** in a merely ** amateur ** way, He practiced and  created             programming projects in the well-known languages, ** Java, Javascript and Lua **. He currently             does not have any professional title, however he seeks to master and improve his skills in             ** programming and ** **digital content creation **, getting the necessary experience when             carrying out projects with great weight and  ** comic and informative **            **audiovisuals ** ** productions **. He is passionate about ** the seventh art ** and a complete obsessed` +
+              ` with ** human creativity **. One of his major goals is to create a association of people` +
+              ` who share his ** whim for creation** **and creativity **, with the objective to dazzle and show` +
+              ` to the world the beautiful and complex human nature, said association that will take the` +
+              ` name of ** Synchronous **.`
           )
           .setColor(noneColor)
-          .attachFiles(["./database/multimedia/gifs/embeds/Welcome_Server.gif"])
-          .setImage("attachment://Welcome_Server.gif");
-        message.author.send(embedTest);
+          .attachFiles(["database/multimedia/gifs/embeds/Bio_EN.png"])
+          .setImage("attachment://Bio_EN.png");
+        message.channel.send(embedTest);
+        break;
+      case "ABOUT":
+        let embedImage = new MessageEmbed()
+          .setColor(noneColor)
+          .attachFiles([
+            "database/multimedia/images/demo/server/KyonaxInformationBanners2.png",
+          ])
+          .setImage("attachment://KyonaxInformationBanners2.png");
+        message.channel.send(embedImage);
+
+        let embedAcerca = new MessageEmbed()
+          .setTitle("ACERCA DE KYONAX")
+          .setDescription(
+            `**Kyonax** nació  el **31 de Julio del año 2000**, en **Bogotá D.C / Colombia**, entró al mundo de la       creación digital de contenido a la edad de **12 años**,  y al mundo de la programación a los **14 años de edad**,         ` +
+              ` empezó  con la  **edición de vídeo**,  poco después  con la  **edición de  imágenes**,  **creación de**             **guiones y poesía**.  Entrenó su voz para  **locución** de  forma meramente  **amateur**, practicó y             creó proyectos de  programación en  los lenguajes conocidos como, **Java , Javascript y Lua**.            Actualmente   no  cuenta   con  ningún  título   profesional,  no  obstante  busca  dominar  y             perfeccionar   sus   habilidades   en   la  **creación  de   contenido  digital  y de programación**,             consiguiendo  la experiencia necesaria  al realizar proyectos  con gran peso y **producciones**            **audiovisuales  cómicas e informativas**. Es un apasionado por **el séptimo arte** y un completo` +
+              ` obsesionado  por la  **creatividad humana**.  Uno de sus mayores  objetivos es el de crear una` +
+              ` asociación de  personas que compartan su  **capricho por la creación y la creatividad**,  con el` +
+              ` objetivo  de  deslumbrar  y  demostrar  al  mundo la  hermosa aunque  compleja  naturaleza` +
+              ` humana, dicha asociación que llevará el nombre de **Synchronous**.`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Bio_ES.png"])
+          .setImage("attachment://Bio_ES.png");
+        message.channel.send(embedAcerca);
+
+        let embedAbout = new MessageEmbed()
+          .setTitle("ABOUT KYONAX")
+          .setDescription(
+            `**Kyonax** was born on ** July 31, 2000**, in ** Bogotá D.C / Colombia**, entering the world of digital content creation at the age of ** 12 years old**, and to the world of programming at the age of ** 14 years old**, started with ** video editing**, shortly after with ** image editing**, ** creating** ** scripts and poetry**.             He trained his voice for ** locution ** in a merely ** amateur ** way, He practiced and  created             programming projects in the well-known languages, ** Java, Javascript and Lua**. He currently             does not have any professional title, however he seeks to master and improve his skills in             ** programming and ** **digital content creation**, getting the necessary experience when             carrying out projects with great weight and  ** comic/informative **            **audiovisuals ** ** productions**. He is passionate about ** the seventh art ** and a complete obsessed` +
+              ` with ** human creativity**. One of his major goals is to create an association of people` +
+              ` who share his** whim for creation** **and creativity**, to dazzle and show` +
+              ` to the world the beautiful and complex human nature, association that will take the` +
+              ` name of** Synchronous **.`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Bio_EN.png"])
+          .setImage("attachment://Bio_EN.png");
+        message.channel.send(embedAbout);
+        break;
+      case "RULES":
+        let embedBannerRulesEs = new MessageEmbed()
+          .setColor(noneColor)
+          .attachFiles([
+            "database/multimedia/images/demo/server/KyonaxRulesBanners.png",
+          ])
+          .setImage("attachment://KyonaxRulesBanners.png");
+        message.channel.send(embedBannerRulesEs);
+        let embedRulesEs = new MessageEmbed()
+          .setTitle("NORMAS DE LA COMUNIDAD")
+          .setDescription(
+            `            
+            **Regla número 1**
+            No confundir **CANALES**, los mensajes deben enviarse a los canales destinados.` +
+              ` En caso contrario, pueden ser borrados sin previo aviso, revisa la descripción y los` +
+              ` mensajes fijados en los canales en los que estés, Algunos canales tienen sus propias` +
+              ` reglas a las que adaptarse.
+            
+            **Regla número 2**
+            **Respetar**, Ten un trato respetuoso hacia otros miembros del chat.` +
+              ` En los canales, no se toleran mensajes con contenido político, obsceno, o religioso de característica` +
+              ` amenazante, difamatoria y condescendiente, que provoca odio hacia los demás.
+            
+            **Regla número 3**
+            **Spam**, No está permitido el spam o enviar mensajes, imágenes o emoticonos innecesarios y repetitivos. 
+            
+            **Regla número 4**
+            **NSFW**, No se tolerará bajo ninguna circunstancia publicar enlaces,` +
+              ` imágenes o textos de característica sexualmente explícita u ofensiva.` +
+              ` Eso incluye cualquier tipo de imágenes o enlaces relacionados con hentai,` +
+              ` violencia o fotos cuyo propósito sea impactar a los demás miembros.` +
+              ` No se permite abusar del filtro de palabras, especialmente para este propósito.
+            
+            **Regla número 5**
+            **Suplantación**,está prohibido hacerse pasar por "moderador" o "admin" en los canales.` +
+              ` Tales actos serán fáciles de detectar y resultarán en un castigo por parte del equipo de Kyonax.` +
+              ` Por favor no dudes en contactarnos si encuentras casos similares.
+            
+            **Regla número 6**
+            **Publicidad** de vídeos, streams, servers, links, entre otros, no está permitido en los canales de texto` +
+              ` excepto en la sección destinada a publicidad.
+            
+            
+            ` +
+              putEmoji(bot, "764154680582340618") +
+              ` **Este canal tiene la __versión corta__ de las reglas**. Para ver las reglas completas a las que estás sujeto, ingresa a este enlace:    
+
+            `
+          )
+          .addField(
+            stripIndents`**> LIBRO DE REGLAS **`,
+            stripIndents`** ` +
+              putEmoji(bot, "763478205071097886") +
+              ` https://kyonax.link/rules_es**`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Rules_ES.png"])
+          .setImage("attachment://Rules_ES.png");
+        message.channel.send(embedRulesEs);
+
+        let embedRulesEn = new MessageEmbed()
+          .setTitle("COMMUNITY GUIDELINES")
+          .setDescription(
+            `
+            **Rule number 1**
+            Do not confuse **CHANNELS**, please chat in the correct channels! Messages may be deleted without notice` +
+              ` if they are not in the right place/content. Visit channel pins and channel description for additional notes!
+            
+            **Rule number 2**
+            **Respect**, message in a respectful manner towards each other. Flaming, harassment, and abuse is NOT tolerated.` +
+              ` This includes messages that are threatening, obscene, defamatory, condescending, libelous, or otherwise racially,` +
+              ` religiously, politically, or sexually objectionable.
+            
+            **Rule number 3**
+            **Spam**, do not spam or flood the chat with constant separate messages of single letters, words, images, or emoticons.` +
+              ` Be mindful of others.
+            
+            **Rule number 4**
+            **NSFW**, posting pornographic or severely offensive links, images, or text will NOT be tolerated.` +
+              ` This includes any sort of hentai, gore, shock images, etc. Do not bypass the word filter, especially for this intent.
+            
+            **Rule number 5**
+            **Impersonation**, It is forbidden to impersonate "moderator" or "admin" in the channels.` +
+              ` Such acts will be easy to detect and will result in punishment from the Kyonax team.` +
+              ` Please do not hesitate to contact us if you find similar cases.
+            
+            **Rule number 6**
+            **Advertising** of videos, streams, servers, links, among others, is not allowed in text channels except in the section` +
+              ` dedicated to advertising.
+            
+            ` +
+              putEmoji(bot, "764154680582340618") +
+              ` **This channel has __a short version__ of the rules**. To see the complete rules to which you are subject, go to this link:`
+          )
+          .addField(
+            stripIndents`**> RULES BOOK **`,
+            stripIndents`** ` +
+              putEmoji(bot, "763478205071097886") +
+              ` https://kyonax.link/rules_en**`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Rules_EN.png"])
+          .setImage("attachment://Rules_EN.png");
+        message.channel.send(embedRulesEn);
+
+        let embedAcceptRules = new MessageEmbed()
+          .setDescription(
+            `
+          _Una vez **leas todo, __reacciona__** con ` +
+              putEmoji(bot, "763478008627200021") +
+              ` para aceptar los términos._
+          _Once you've **read this, __react__** with ` +
+              putEmoji(bot, "763478008627200021") +
+              ` to accept the terms._`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Accept.png"])
+          .setImage("attachment://Accept.png");
+        message.channel.send(embedAcceptRules);
+        break;
+      case "SERVER":
+        let embedBannerServerEs = new MessageEmbed()
+          .setColor(noneColor)
+          .attachFiles([
+            "database/multimedia/images/demo/server/KyonaxServerBanners.png",
+          ])
+          .setImage("attachment://KyonaxServerBanners.png");
+        message.channel.send(embedBannerServerEs);
+
+        let embedServerEs = new MessageEmbed()
+          .setTitle("COMMUNITY GUIDELINES")
+          .setDescription()
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Rules_EN.png"])
+          .setImage("attachment://Rules_EN.png");
+        message.channel.send(embedServerEs);
+        break;
+      case "NOTHING":
+        message.channel.send(
+          "Si no puedes ver los mensajes en este canal, ve a **Configuraciones de Usuario > Texto e imágenes** (Asegurate que todas las opciones estén activadas)"
+        );
+        message.channel.send(
+          "If you can't see anything in this channel, go to **User Settings > Text & Images > Link Preview** (make sure this is toggled on!)"
+        );
+        break;
+      case "SOCIALME":
+        let embedBannerSocialEs = new MessageEmbed()
+          .setColor(noneColor)
+          .attachFiles([
+            "database/multimedia/images/demo/server/KyonaxSocialMediarBanners.png",
+          ])
+          .setImage("attachment://KyonaxSocialMediarBanners.png");
+        message.channel.send(embedBannerSocialEs);
+
+        let embedSocialEs = new MessageEmbed()
+          .setTitle("REDES SOCIALES")
+          .setDescription(
+            `
+            Kyonax como creador de contenido maneja varias redes sociales, si quieres apoyarle para que suba más contenido,` +
+              ` síguelo dando click en estos enlaces:
+              
+              `
+          )
+          .addField(
+            stripIndents`**> Enlaces:**`,
+            `
+          
+          ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Facebook: https://kyonax.link/facebook**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Instagram: https://kyonax.link/instagram**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **YouTube: https://kyonax.link/youtube**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Twitch: https://kyonax.link/twitch**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **TikTok: https://kyonax.link/tiktok**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **GitHub: https://kyonax.link/github**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Twitter: https://kyonax.link/twitter**
+
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Kyonax's Comfy Fort: https://kyonax.link/discord**
+          
+          **El Reddit de Kyonax no está agregado porque __aún no usa esa Red Social__.**` +
+              ` Todas los enlaces a las redes sociales que usa están arriba, si encuentras cualquier cuenta con su nombre` +
+              ` que no esté en los enlaces de arriba o en el **LinkTree** del enlace de abajo, significa que **__no está asociada__ con Kyonax.**
+
+
+          `
+          )
+          .addField(
+            stripIndents`**> LinkTree con todos los enlaces a redes sociales que administra Kyonax:**
+          `,
+            `` +
+              putEmoji(bot, "763478205071097886") +
+              ` **LinkTree: https://linktr.ee/kyonax**`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/images/demo/server/CreatorContent.png"])
+          .setImage("attachment://CreatorContent.png");
+        message.channel.send(embedSocialEs);
+
+        let embedSocialEn = new MessageEmbed()
+          .setTitle("SOCIAL MEDIA")
+          .setDescription(
+            `
+            Kyonax as a content creator manages several social networks, if you want to support him to upload more content,` +
+              ` follow him by clicking on these links:
+              
+              `
+          )
+          .addField(
+            stripIndents`**> Links:**`,
+            `
+          
+          ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Facebook: https://kyonax.link/facebook**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Instagram: https://kyonax.link/instagram**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **YouTube: https://kyonax.link/youtube**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Twitch: https://kyonax.link/twitch**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **TikTok: https://kyonax.link/tiktok**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **GitHub: https://kyonax.link/github**
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Twitter: https://kyonax.link/twitter**
+
+              ` +
+              putEmoji(bot, "763478205071097886") +
+              ` **Kyonax's Comfy Fort: https://kyonax.link/discord**
+          
+          **Kyonax's Reddit is not added because __he doesn't use that Social Network yet__.**` +
+              ` All the links to the social networks he uses are above, if you find any account with his name` +
+              ` that is not in the links above or in the **LinkTree** of the link below, it means that it is not associated with **Kyonax.**
+
+
+          `
+          )
+          .addField(
+            stripIndents`**> LinkTree with all the social media links:**
+          `,
+            `` +
+              putEmoji(bot, "763478205071097886") +
+              ` **LinkTree: https://linktr.ee/kyonax**`
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/images/demo/server/CreatorContent.png"])
+          .setImage("attachment://CreatorContent.png");
+        message.channel.send(embedSocialEn);
+
+        let embedNotifyRules = new MessageEmbed()
+          .setDescription(
+            `
+            Recibe **notificaciones** reaccionando con los siguientes emojis.
+            Receive **notifications** reacting with the following emojis.
+            `
+          )
+          .addField(
+            stripIndents`**> Role Emojis:**`, 
+            `
+            ` +
+              putEmoji(bot, "764154680350867457") +
+              ` **GitHub: **` +
+              putEmoji(bot, "764154679947952211") +
+              ` 
+              ` +
+              putEmoji(bot, "764154680350867457") +
+              ` **Twitter:** ` +
+              putEmoji(bot, "764156796733751306") +
+              `              
+            `,true
+          )
+          .addField(stripIndents`**> Role Emoji:**`,
+            `
+            ` +
+              putEmoji(bot, "764154680350867457") +
+              ` **Twitch:** ` +
+              putEmoji(bot, "767820188576907334") +
+              `
+              ` +
+              putEmoji(bot, "764154680350867457") +
+              ` **YouTube:** ` +
+              putEmoji(bot, "767820188228780064") +
+              `
+            `,true
+          )
+          .setColor(noneColor)
+          .attachFiles(["database/multimedia/gifs/embeds/Notify_EN_ES.png"])
+          .setImage("attachment://Notify_EN_ES.png");
+        message.channel.send(embedNotifyRules);
         break;
       default:
         return message.channel.send("No se encuentra el canal.");

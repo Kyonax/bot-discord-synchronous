@@ -43,7 +43,7 @@ module.exports = class TryCommand extends BaseCommand {
       autor.id
     );
     let { memberLevel } = ObjectAuthor;
-    if (!memberlevel) return perm.notRoleLevel(bot, message, 3);
+    if (!memberLevel) return perm.notRoleLevel(bot, message, 3);
     if (memberLevel < 3) return perm.notRoleLevel(bot, message, 3);
     //Recompensas de Niveles de Rol Usando comandos de Rol
     levelRoleRewards(message, bot);

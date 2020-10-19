@@ -42,11 +42,11 @@ module.exports = class WarnCommand extends BaseCommand {
     );
     let reason = args.join(" ").slice(22);
     let warnChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "❗❗-warnings"
+      (ch) => ch.name === "🧧・level"
     );
     if (!warnChannel) {
       return message.guild.channels
-        .create("❗❗-warnings", {
+        .create("🧧・level", {
           type: "text",
           permissionOverwrites: [
             {

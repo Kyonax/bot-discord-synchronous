@@ -64,28 +64,7 @@ module.exports = class ReadyEvent extends BaseEvent {
       //Nombre de todos los Roles
       guild.roles.cache.forEach((rol) => {
         nameOfRoles.push(rol.name);
-      });
-      //Tracker Members
-      const serverChannel = guild.channels.cache.find((ch) =>
-        ch.name.includes("🌌-welcome")
-      );
-      if (!serverChannel) {
-        return guild.channels
-          .create("🌌-welcome", {
-            type: "text",
-            permissionOverwrites: [
-              {
-                id: guild.roles.everyone,
-                deny: ["SEND_MESSAGES", "ATTACH_FILES"],
-                allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
-              },
-            ],
-          })
-          .catch((err) => console.log(err));
-      }
-      serverChannel
-        .setName("🌌-welcome-" + numberOfMembers)
-        .catch((err) => console.log(err));
+      });         
       //Conexión e Implementación del Respectivo Prefijo
       this.connection
         .query(

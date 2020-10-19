@@ -66,23 +66,7 @@ module.exports = class GuildMemberAddEvent extends BaseEvent {
       const serverChannel = guild.channels.cache.find((ch) =>
         ch.name.includes("🌌-welcome")
       );
-      if (!serverChannel) {
-        return guild.channels
-          .create("🌌-welcome", {
-            type: "text",
-            permissionOverwrites: [
-              {
-                id: guild.roles.everyone,
-                deny: ["SEND_MESSAGES", "ATTACH_FILES"],
-                allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
-              },
-            ],
-          })
-          .catch((err) => console.log(err));
-      }
-      serverChannel
-        .setName("🌌-welcome-" + numberOfMembers)
-        .catch((err) => console.log(err));
+      if (!serverChannel) return;
     });
 
     member.roles.add("696113185945550988");

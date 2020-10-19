@@ -227,11 +227,11 @@ module.exports = class MessageEvent extends BaseEvent {
         if (newLevel > memberLevel) {
           const emojiLevelUp = synchronous.emojiID[0].levelup;
           const levelChannel = message.guild.channels.cache.find(
-            (ch) => ch.name === "💠-niveles-levels"
+            (ch) => ch.name === "🧧・level"
           );
           if (!levelChannel) {
             return message.guild.channels
-              .create("💠-niveles-levels", {
+              .create("🧧・level", {
                 type: "text",
                 permissionOverwrites: [
                   {
