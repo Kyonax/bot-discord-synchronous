@@ -666,7 +666,7 @@ module.exports = class PutembedsCommand extends BaseCommand {
               putEmoji(bot, "763478205071097886") +
               ` **Kyonax's Comfy Fort: https://kyonax.link/discord**
           
-          **Kyonax's Reddit is not added because __he doesn't use that Social Network yet__.**` +
+          **Kyonax's Reddit is not added because __he doesn't use that Social Network yet__**` +
               ` All the links to the social networks he uses are above, if you find any account with his name` +
               ` that is not in the links above or in the **LinkTree** of the link below, it means that it is not associated with **Kyonax.**
 
