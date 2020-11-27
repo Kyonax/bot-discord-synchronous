@@ -5,9 +5,8 @@ const mysql = require("mysql2/promise");
 module.exports = mysql
   //Creando Conexión con la base de Datos usando dotenv
   .createConnection({
-    host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: process.env.DB_NAME    
+    database: process.env.DB_NAME        
   })
   .catch((err) => console.log(err));

@@ -33,14 +33,7 @@ module.exports = class ReadyEvent extends (
   }
   async run(bot) {
     //Mensaje por Consola Bot Iniciado
-    console.log(`${bot.user.tag} iniciado`);
-    this.connection.query(`SELECT * FROM GuildMembers;`).then((result) => {
-      let mem = result[0];
-      mem.forEach((mem) => {
-        console.log(mem);
-      });
-    });
-
+    console.log(`${bot.user.tag} iniciado`);   
     //Variables
     const numberOfGuilds = bot.guilds.cache.size;
     let numberOfMembers = 0;
