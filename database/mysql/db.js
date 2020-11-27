@@ -5,12 +5,9 @@ const mysql = require("mysql2/promise");
 module.exports = mysql
   //Creando Conexión con la base de Datos usando dotenv
   .createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
+    host: 'us-cdbr-east-02.cleardb.com',
+    user: 'ba89ee34cfef0c',
+    password: '96e47622',
+    database: 'heroku_f7263fe53e8ea42'    
   })
   .catch((err) => console.log(err));
