@@ -22,7 +22,9 @@ const bankGuilds = new Map();
 const rolePlayMembers = new Map();
 const guildsRoleplay = new Map();
 //Exportación de Evento ready
-module.exports = class ReadyEvent extends BaseEvent {
+module.exports = class ReadyEvent extends (
+  BaseEvent
+) {
   //Constructor del Objeto
   constructor() {
     super("ready");
@@ -32,10 +34,13 @@ module.exports = class ReadyEvent extends BaseEvent {
   async run(bot) {
     //Mensaje por Consola Bot Iniciado
     console.log(`${bot.user.tag} iniciado`);
-    this.connection.query(`SELECT * FROM GuildMembers;`).then((result) =>{
-      console.log(result[0][0].memberID)
-    })
-    
+    this.connection.query(`SELECT * FROM GuildMembers;`).then((result) => {
+      let mem = result[0];
+      mem.forEach((mem) => {
+        console.log(mem);
+      });
+    });
+
     //Variables
     const numberOfGuilds = bot.guilds.cache.size;
     let numberOfMembers = 0;
@@ -68,7 +73,7 @@ module.exports = class ReadyEvent extends BaseEvent {
       //Nombre de todos los Roles
       guild.roles.cache.forEach((rol) => {
         nameOfRoles.push(rol.name);
-      });         
+      });
       //Conexión e Implementación del Respectivo Prefijo
       this.connection
         .query(
