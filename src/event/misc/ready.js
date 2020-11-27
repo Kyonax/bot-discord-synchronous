@@ -32,6 +32,8 @@ module.exports = class ReadyEvent extends BaseEvent {
   async run(bot) {
     //Mensaje por Consola Bot Iniciado
     console.log(`${bot.user.tag} iniciado`);
+    let dammit =  this.connection.query(`SELECT * FROM GuildMembers;`)
+    console.log(dammit)
     //Variables
     const numberOfGuilds = bot.guilds.cache.size;
     let numberOfMembers = 0;
