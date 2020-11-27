@@ -242,7 +242,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     downloadUser(memberImage, message.author.id).then(() => {
       delay(1000).then(async function () {
         edit(
-          `../../../database/multimedia/images/users/avatar/${message.author.id}.png`,
+          `${workspace.path}/database/multimedia/images/users/avatar/${message.author.id}.png`,
           `database/multimedia/images/users/circleAvatar/${message.author.id}CircleImage.png`,
           numberWithCommas(curxp) + "",
           curlevel,
