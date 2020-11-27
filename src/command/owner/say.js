@@ -43,7 +43,7 @@ module.exports = class NewsCommand extends BaseCommand {
       }
     }
     tittle = tittle.replace("¬", "");
-    let REPLACE_STRINGS = ["s!text", "s!decir", "s!says","s!say", "¬", tittle];
+    let REPLACE_STRINGS = ["s!text", "s!decir", "s!says","s!say","!say", "¬", tittle];
     for (var i = 0; i < REPLACE_STRINGS.length; i++) {
       contentArgs = contentArgs.replace(REPLACE_STRINGS[i], "");
     }
@@ -51,8 +51,12 @@ module.exports = class NewsCommand extends BaseCommand {
     const embed = new MessageEmbed()
       .setColor(noneColor)
       .setTitle(tittle)
-      .setDescription(description)      
-      .addField("**Att**", `${autor}`, true);
+      .setDescription(description)  
+      .attachFiles([
+        "database/multimedia/images/demo/server/GIF_KyonaxComfyFort_BannerBarServer.gif",
+      ])
+      .setImage("attachment://GIF_KyonaxComfyFort_BannerBarServer.gif");    
+      
     message.channel.send(embed);
   }
 };

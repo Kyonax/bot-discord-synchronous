@@ -86,17 +86,16 @@ module.exports = class DniCommands extends BaseCommand {
     const actionLevel =
       "🟦".repeat(nextLevelIndex * 2) + "⬜".repeat((10 - nextLevelIndex) * 2);
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].levelup);
-    if (message.guild.id != synchronous.guildID) emoji = "💠";
+    let emoji = putEmoji(bot, synchronous.emojiID[0].levelup);    
     //Embed
     let embed = new MessageEmbed()
       .setAuthor(`${member.displayName}'s DNI`, member.user.displayAvatarURL())
       .setDescription(
-        `${memberBiography}.\n\nLlegando a la **Ciudad de Synchronous** el día ${joined}`
+        `${memberBiography}.\n\nLlegando a la **${message.guild.name}** el día ${joined}`
       )
       .setThumbnail(member.user.displayAvatarURL())
       .addField(`${emoji} Nivel de Rol`, `${memberLevel}`, true)
-      .addField(`🏅 Rank`, `#${rolePlayRank}`, true)
+      .addField(``+putEmoji(bot, "780487068237037568")+` Rank`, `#${rolePlayRank}`, true)
       .addField(`⌛ Edad`, `${memberAge} años.`, true)
       .addField(`☄ Renombre`, `${memberRespect}`, true)
       .addField(`💼 Trabajo`, `${memberWork}.`, true)

@@ -38,20 +38,20 @@ module.exports = class StoreCommand extends BaseCommand {
       message.guild.id,
       message.author.id
     );
-    const actualAuthorLevel = parseInt(ObjectMember.memberLevel);
+    let actualAuthorLevel = parseInt(ObjectMember.memberLevel);
     let actualAuthorXP = parseInt(ObjectMember.memberXP);
-    const levelPrice = Math.floor(
+    let levelPrice = Math.floor(
       actualAuthorLevel * 9000 + actualAuthorXP / 9
     );
     //Inicialización de Emojis y su Uso respectivo
     //Inicialización de Emojis y su Uso respectivo
-    const emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
+    let emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
     if (message.guild.id != synchronous.guildID) emojiSynkoins = "💰";
-    const boostb = putEmoji(bot, synchronous.emojiID[0].boostb);
+    let boostb = putEmoji(bot, synchronous.emojiID[0].boostb);
     if (message.guild.id != synchronous.guildID) boostb = "🔰";
-    const boosta = putEmoji(bot, synchronous.emojiID[0].boosta);
+    let boosta = putEmoji(bot, synchronous.emojiID[0].boosta);
     if (message.guild.id != synchronous.guildID) boosta = "🔰";
-    const boostp = putEmoji(bot, synchronous.emojiID[0].boostp);
+    let boostp = putEmoji(bot, synchronous.emojiID[0].boostp);
     if (message.guild.id != synchronous.guildID) boostp = "🔰";
     //Embed General que especifica la función de la Tienda
     let storeEmbed = new MessageEmbed()

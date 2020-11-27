@@ -1,6 +1,7 @@
 //Importación especifica de Metodos - RichEmbed - Perms - cautioncolor Color
 const { MessageEmbed } = require("discord.js");
-const { thrizzColor } = require("../../../database/utils/color/color.json");
+const { kyoColor } = require("../../../database/utils/color/color.json");
+const { putEmoji } = require("../../utils/misc/functions");
 const { addMessageToBin } = require("../../utils/misc/bin");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
@@ -24,21 +25,18 @@ module.exports = class NewsCommand extends BaseCommand {
     addMessageToBin(bot, message);
     //Eliminación del mensaje con Comandos
     message.delete().catch((O_o) => {});
-    //Creación de Objetos
-    const err = new Error();
+    //Creación de Objetos    
     const perm = new Perms();
     //Validación Permisos
     if (message.member.id != message.guild.ownerID)
       return perm.ownerPerms(bot, message);
     //Variables
-    let autor = message.author;
-    const type = args[0].toLowerCase();
-    if (!type) return err.noTypeDigitNews(bot, message);
+    let autor = message.author;        
     let contentArgs = "";
     let key = "¬";
     let tittle = "None";
     let description = "None";
-    for (var i = 1; i < args.length; i++) {
+    for (var i = 0; i < args.length; i++) {
       contentArgs = contentArgs + " " + args[i];
       if (args[i].toString() === key) {
         tittle = contentArgs;
@@ -47,75 +45,33 @@ module.exports = class NewsCommand extends BaseCommand {
       }
     }
     tittle = tittle.replace("¬", "");
-    contentArgs = contentArgs.replace("s!news", "");
-    contentArgs = contentArgs.replace("server_discord", "");
-    contentArgs = contentArgs.replace("server_mta", "");
+    contentArgs = contentArgs.replace("!news", "");    
     contentArgs = contentArgs.replace("¬", "");
     contentArgs = contentArgs.replace(tittle, "");
     description = contentArgs;
     //Embed
     const embed = new MessageEmbed()
-      .setColor(thrizzColor)
+      .setColor(kyoColor)
       .setTitle(tittle)
       .setDescription(description)
       .setTimestamp()
       .addField("**Att**", `${autor}`, true)
       .addField(
-        `**Noticia - [${type.toUpperCase()}]**`,
+        `**Noticia - [News - Notify]**`,
         `**Enviado desde ${message.channel}**`,
         true
       )
       .setFooter("Central de Periodismo Synchronous News");
-    switch (type) {
-      case "server_mta":
-        embed.attachFiles(["database/multimedia/gifs/embeds/NewsMTA.gif"]);
-        embed.setImage("attachment://NewsMTA.gif");
-        const mtaChannel = message.guild.channels.cache.find(
-          (ch) => ch.name === "⋉⧼🔔⧽⋊news-mta⦊"
-        );
-        if (!mtaChannel) {
-          return message.guild.channels
-            .create("⋉⧼🔔⧽⋊news-mta⦊", {
-              type: "text",
-              permissionOverwrites: [
-                {
-                  id: message.guild.roles.everyone,
-                  deny: ["SEND_MESSAGES", "ATTACH_FILES"],
-                  allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
-                },
-              ],
-            })
-            .catch((err) => console.log(err));
-        }
-        mtaChannel.send(embed).catch((err) => console.log(err));
-        break;
-      case "server_discord":
-        embed.attachFiles([
-          "database/multimedia/gifs/embeds/NewsSynchronous.gif",
-        ]);
-        embed.setImage("attachment://NewsSynchronous.gif");
-        const serverChannel = message.guild.channels.cache.find(
-          (ch) => ch.name === "⋉⧼💡⧽⋊news⦊"
-        );
-        if (!serverChannel) {
-          return message.guild.channels
-            .create("⋉⧼💡⧽⋊news⦊", {
-              type: "text",
-              permissionOverwrites: [
-                {
-                  id: message.guild.roles.everyone,
-                  deny: ["SEND_MESSAGES", "ATTACH_FILES"],
-                  allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
-                },
-              ],
-            })
-            .catch((err) => console.log(err));
-        }
-        serverChannel.send(embed).catch((err) => console.log(err));
-        break;
-      default:
-        err.noTypeFoundNews(bot, message, type);
-        break;
-    }
+      embed.attachFiles([
+        "database/multimedia/gifs/embeds/GIF_KyonaxComfyFort_BannerBarServer.gif",
+      ]);
+      embed.setImage("attachment://GIF_KyonaxComfyFort_BannerBarServer.gif");
+      const serverChannel = message.guild.channels.cache.find(
+        (ch) => ch.name === "announcements"
+      );
+      if (!serverChannel) {
+        return message.channel.send("El Mensaje no se ha podido enviar porque no se ha creado el canal para announcements")
+      }
+      serverChannel.send(``+putEmoji(bot, "764154680350867457")+` **¡Nuevo anuncio | New Announcement! <@&779080288701382667>**`,embed).catch((err) => console.log(err));
   }
 };

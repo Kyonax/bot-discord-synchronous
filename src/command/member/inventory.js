@@ -201,9 +201,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Emoji
     //Inicialización de Emojis y su Uso respectivo
     let emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
-    if (message.guild.id != synchronous.guildID) emojiLevelUp = "💠";
-    let emojiWarning = putEmoji(bot, synchronous.emojiID[0].warning);
-    if (message.guild.id != synchronous.guildID) emojiWarning = "⚠";
+    let emojiWarning = putEmoji(bot, synchronous.emojiID[0].warning)
     let emojiBoost = null;
     const boostTime = parseInt(ObjectMember.memberBoost);
     if (boostTime === 1) {
@@ -211,14 +209,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     }
     if (boostTime === 10) {
       emojiBoost = putEmoji(bot, synchronous.emojiID[0].boostb);
-      if (message.guild.id != synchronous.guildID) emojiBoost = "🔰";
     }
     if (boostTime === 50) {
-      if (message.guild.id != synchronous.guildID) emojiBoost = "🔰";
       emojiBoost = putEmoji(bot, synchronous.emojiID[0].boosta);
     }
     if (boostTime === 100) {
-      if (message.guild.id != synchronous.guildID) emojiBoost = "🔰";
       emojiBoost = putEmoji(bot, synchronous.emojiID[0].boostp);
     }
 

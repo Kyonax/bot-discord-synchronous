@@ -34,46 +34,30 @@ module.exports = class ClearCommand extends BaseCommand {
     //Inicialización de Párametros Member
     const { moderatorMember } = existMember[0];
     //Insuficientes Permisos para usar el Comando
-    if (moderatorMember === 0) return perm.moderatorPerms(bot, message);
+    if (moderatorMember != 1) return perm.moderatorPerms(bot, message);
     //Emoji from Map
     const emoji = synchronous.emojiID[0].afirmado;
     if (!args[0]) {
       message.channel.bulkDelete(10);
-      if (message.guild.id === synchronous.guildID) {
-        return message.channel
+      message.channel
           .send(
             `${putEmoji(bot, emoji)} Se han destruido **10** mensajes.`
           )
           .then((msg) =>
             msg.delete({ timeout: 5000, reason: "It had to be done." })
           );
-      } else {
-        return message.channel
-          .send(`✅ Se han destruido **10** mensajes.`)
-          .then((msg) =>
-            msg.delete({ timeout: 5000, reason: "It had to be done." })
-          );
-      }
     }
     if (isNaN(args[0]) === true) return err.noCorrectArguments(bot, message);
     message.channel.bulkDelete(args[0]).then(() => {
-      if (message.guild.id === synchronous.guildID) {
-        message.channel
-          .send(
-            `${putEmoji(bot, emoji)} Se han destruido ${
-              args[0]
-            } mensajes.`
-          )
-          .then((msg) =>
-            msg.delete({ timeout: 5000, reason: "It had to be done." })
-          );
-      } else {
-        message.channel
-          .send(`✅ Se han destruido **${args[0]}** mensajes.`)
-          .then((msg) =>
-            msg.delete({ timeout: 5000, reason: "It had to be done." })
-          );
-      }
+      message.channel
+      .send(
+        `${putEmoji(bot, emoji)} Se han destruido ${
+          args[0]
+        } mensajes.`
+      )
+      .then((msg) =>
+        msg.delete({ timeout: 5000, reason: "It had to be done." })
+      );
     });    
   }
 };

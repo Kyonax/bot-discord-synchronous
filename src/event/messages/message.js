@@ -46,6 +46,8 @@ module.exports = class MessageEvent extends BaseEvent {
     this.connection = StateManager.connection;
   }
   async run(bot, message) {
+    //Restricted Servers
+    
     //Reaction specific MessageEmbeds
     await reactionEmbeds(bot, message);
     //Attachment Message
@@ -227,11 +229,11 @@ module.exports = class MessageEvent extends BaseEvent {
         if (newLevel > memberLevel) {
           const emojiLevelUp = synchronous.emojiID[0].levelup;
           const levelChannel = message.guild.channels.cache.find(
-            (ch) => ch.name === "🧧・level"
+            (ch) => ch.name === "📯・level-up"
           );
           if (!levelChannel) {
             return message.guild.channels
-              .create("🧧・level", {
+              .create("📯・level-up", {
                 type: "text",
                 permissionOverwrites: [
                   {
@@ -253,16 +255,11 @@ module.exports = class MessageEvent extends BaseEvent {
             )
             .addField("**Nivel Alcanzado**", `Nuevo nivel **${newLevel}**`)
             .setFooter("Estadísticas de niveles Internacional de Synchronous")
-            .setTimestamp();
-          if (guildID === synchronous.guildID) {
-            levelUpEmbed.setTitle(
+            .setTimestamp()
+            .setTitle(
               `**Nivel Alcanzado** ${putEmoji(bot, emojiLevelUp)}`
             );
             levelChannel.send(levelUpEmbed);
-          } else {
-            levelUpEmbed.setTitle(`**Nivel Alcanzado** 💠`);
-            levelChannel.send(levelUpEmbed);
-          }
         }
         const updateMemberXP = await updateGuildMemberXP(
           guildID,
