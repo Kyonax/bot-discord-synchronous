@@ -49,13 +49,13 @@ module.exports = class BuenardoCommand extends BaseCommand {
       size: 1024,
     });
     downloadUser(imageMember, autor.id).then(() => {
-      delay(1000).then(async function () {
+      delay(1300).then(async function () {
         edit(
           `database/multimedia/images/users/avatar/${autor.id}.png`,
           autor.id
         );
       });
-      return delay(1200).then(async function () {
+      return delay(1700).then(async function () {
         message.channel.send("", {
           files: [
             `database/multimedia/images/magik/exports/outputImage${autor.id}Buenardo.png`,
