@@ -55,7 +55,7 @@ module.exports = class BuenardoCommand extends BaseCommand {
           autor.id
         );
       });
-      return delay(1700).then(async function () {
+      return delay(2100).then(async function () {
         message.channel.send("", {
           files: [
             `database/multimedia/images/magik/exports/outputImage${autor.id}Buenardo.png`,
