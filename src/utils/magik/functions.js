@@ -14,7 +14,7 @@ module.exports = {
       __dirname,
       "",
       "../../../database/multimedia/images/magik/lastImage.jpg"
-    );
+    );    
 
     const response = await Axios({
       method: "GET",
@@ -60,6 +60,8 @@ module.exports = {
     });
   },
   circleImage: async function (inImage, name) {
+    const CIRCLE_PATH = Path.resolve(__dirname, "", `../../../database/multimedia/images/users/circleAvatar/${name}CircleImage.png`)
+
     fs.createReadStream(__dirname + inImage)
       .pipe(
         new PNG({
@@ -84,10 +86,7 @@ module.exports = {
           }
         }
         this.pack().pipe(
-          fs.createWriteStream(
-            __dirname +
-              `../../../../database/multimedia/images/users/circleAvatar/${name}CircleImage.png`
-          )
+          fs.createWriteStream(CIRCLE_PATH)
         );
       });
   },
