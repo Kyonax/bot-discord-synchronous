@@ -42,7 +42,7 @@ module.exports = class FuckCommand extends BaseCommand {
       autor.id
     );       
     const { moderatorMember, adminMember, inmortalMember } = ObjectAuthor;
-    if (moderatorMember !== 0){
+    if (moderatorMember !== 1){
     let { memberLevel } = ObjectAuthor;
     if (memberLevel < 18) return perm.notRoleLevel(bot, message, 18);
     }
