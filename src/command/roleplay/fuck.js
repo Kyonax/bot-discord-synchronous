@@ -35,13 +35,13 @@ module.exports = class FuckCommand extends BaseCommand {
     let autor = message.author;
     const member = getMember(message, args[0]);
     let ObjectAuthor = null;
-    ObjectAuthor = initObjectMember(
-      moderatorMember,
+    ObjectAuthor = initObjectMember(      
       guildsRoleplay,
       ObjectAuthor,
       message.guild.id,
       autor.id
-    );   
+    );       
+    const { moderatorMember, adminMember, inmortalMember } = ObjectAutor;
     if (moderatorMember !== 0){
     let { memberLevel } = ObjectAuthor;
     if (memberLevel < 18) return perm.notRoleLevel(bot, message, 18);
