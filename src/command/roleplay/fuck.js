@@ -36,13 +36,17 @@ module.exports = class FuckCommand extends BaseCommand {
     const member = getMember(message, args[0]);
     let ObjectAuthor = null;
     ObjectAuthor = initObjectMember(
+      moderatorMember,
       guildsRoleplay,
       ObjectAuthor,
       message.guild.id,
       autor.id
     );   
+    if (moderatorMember !== 0){
     let { memberLevel } = ObjectAuthor;
     if (memberLevel < 18) return perm.notRoleLevel(bot, message, 18);
+    }
+    
     //Recompensas de Niveles de Rol Usando comandos de Rol
     levelRoleRewards(message, bot);
     //Inicialización Usuario - Gifs Array - Selección de Gifs
