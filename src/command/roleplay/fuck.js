@@ -41,10 +41,9 @@ module.exports = class FuckCommand extends BaseCommand {
       message.guild.id,
       autor.id
     );       
-    const { moderatorMember, adminMember, inmortalMember } = ObjectAuthor;
-    if (moderatorMember !== 1){
-    let { memberLevel } = ObjectAuthor;
-    if (memberLevel < 18) return perm.notRoleLevel(bot, message, 18);
+    let { moderatorMember, adminMember, inmortalMember, memberLevel } = ObjectAuthor;
+    if (moderatorMember !== 1){    
+    
     }
     
     //Recompensas de Niveles de Rol Usando comandos de Rol
