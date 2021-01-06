@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Kyonax/bot-discord-synchronous#readme",
   "dependencies": {
     "apex-api": "^3.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "common-tags": "^1.8.0",
     "dateformat": "^3.0.3",
     "discord.js": "^12.2.0",
